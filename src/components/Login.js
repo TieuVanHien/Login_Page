@@ -1,21 +1,12 @@
 import React, {useState} from 'react';
 import '../CSS/Style.scss';
 import logo from '../Images/logo.png'
-import validator from 'validator';
+import {Button, TextField} from "@mui/material";
+
 
 
 
 const Login = () => {
-    const [emailError, setEmailError] = useState('')
-    const check = (e) => {
-        let email = e.target.value;
-        if(validator.isEmail(email) ) {
-            setEmailError('')
-        } else {
-            setEmailError('Please enter a valid email')
-        }
-    }
-
 
     const link = {
         url: '',
@@ -34,25 +25,27 @@ const Login = () => {
                     </div>
                     <br></br>
                     <br></br>
-                    <input type='email'
-                           name='email'
-                           placeholder='Email'
-                           id='email'
-                           onChange={(e) => check(e)}
-                            />
+                    <TextField
+                        id="outlined-textarea"
+                        label="Email"
+                        type='email'
+                        fullWidth
+                    />
                     <br></br>
 
-                    <input type='password'
-                           name='password'
-                           placeholder = 'Password'
-                           id='password'
-                            />
+                    <TextField
+                        id="outlined-password-input"
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password"
+                        fullWidth
+                    />
                     <br></br>
                     <br></br>
                     <a href={link.url} >Forgot Password?</a>
                     <br></br>
-                    <button type='submit'  id='login' >Log In</button>
-                    {emailError }
+                    <Button variant="contained" >Log In</Button>
+
 
                     <br></br>
                     <h6>New User? <a id='register' href={link.regisLink}>Register Here</a></h6>
