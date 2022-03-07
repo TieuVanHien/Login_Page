@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <div className='container'>
             <div className='form-container'>
-                <form className='form'>
+                <form className='form' method='get'>
                     <br></br>
                     <div className='logo'>
                         <img src={logo}  alt={'Capstone Logo'}/>
