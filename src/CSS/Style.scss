@@ -50,17 +50,16 @@ body {
         text-decoration: underline;
     }
 
-    button {
-        color: white;
+    Button {
         width: 200px;
         height: 40px;
         font-family: inter, sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 17px;
-        line-height: 24px;
         background: #257A7A;
         border-radius: 60px;
+    }
+
+    Button:hover {
+        background: #31A1A1;
     }
 
     #register {
